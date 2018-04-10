@@ -1,0 +1,4814 @@
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/hinted-Gotham-Book.eot');
+  src: url('../fonts/hinted-Gotham-Book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hinted-Gotham-Book.woff') format('woff'),
+  url('../fonts/hinted-Gotham-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/hinted-Gotham-Light.eot');
+  src: url('../fonts/hinted-Gotham-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hinted-Gotham-Light.woff') format('woff'),
+  url('../fonts/hinted-Gotham-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/hinted-Gotham-Medium.eot');
+  src: url('../fonts/hinted-Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hinted-Gotham-Medium.woff') format('woff'),
+  url('../fonts/hinted-Gotham-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/hinted-Gotham-Bold.eot');
+  src: url('../fonts/hinted-Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hinted-Gotham-Bold.woff') format('woff'),
+  url('../fonts/hinted-Gotham-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/hinted-Gotham-Black.eot');
+  src: url('../fonts/hinted-Gotham-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/hinted-Gotham-Black.woff') format('woff'),
+  url('../fonts/hinted-Gotham-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
+* {
+  outline: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0 !important;
+
+  font-family: 'Gotham';
+  font-size: 13px;
+  font-kerning: normal;
+  color: #1c1c1c;
+  background: #f1f1f1;
+
+  -webkit-text-size-adjust: 100%;
+  position: relative;
+
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+body.pcJS {
+  overflow: hidden
+}
+
+html.WpReset {
+  margin: 0 !important;
+}
+body.Hide {
+  overflow: hidden;
+  background: #000;
+}
+body.Hide #Menu,
+body.Hide #Contents,
+body.Hide #Background {
+  opacity: 0;
+}
+
+
+
+
+a,
+input[type="submit"],
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+
+img,
+a img {
+  border: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr,
+ul,
+li {
+  margin: 0px;
+  padding: 0px;
+  line-height: normal;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.Pad20 {
+  padding: 20px;
+}
+.PadL20 {
+  padding-left: 20px;
+}
+.PadR20 {
+  padding-right: 20px;
+}
+
+.MargL10 {
+  margin-left: 10px;
+}
+.MargB10 {
+  margin-bottom: 10px;
+}
+.MargT10 {
+  margin-top: 10px;
+}
+
+
+.Clear {
+  clear: both;
+  margin: 0px;
+  padding: 0px;
+}
+
+.alignleft,
+.FloatL {
+  float: left;
+}
+.alignleft {
+  margin: 25px 25px 25px 0;
+}
+.alignright,
+.FloatR {
+  float: right !important;
+}
+.alignright {
+  margin: 25px 0 25px 25px;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.textLeft {
+  text-align: left;
+}
+.textCenter {
+  text-align: center !important;
+}
+.textRight {
+  text-align: right;
+}
+.textUppercase {
+  text-transform: uppercase !important;
+}
+.textItalic {
+  font-style: italic !important;
+}
+
+.Table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.TableCell {
+  display: table-cell !important;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  float: none !important;
+}
+
+.Cl {
+  display: block;
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+}
+
+.Cl33p {
+  width: 33.333%;
+}
+.Cl50p {
+  width: 50%;
+}
+.Cl66p {
+  width: 66.666%;
+}
+.Cl100p {
+  width: 100%;
+}
+.Cl180px {
+  width: 180px;
+}
+.Cl400px {
+  width: 400px;
+}
+.Cl750px {
+  width: 750px;
+}
+
+.ClH50p {
+  height: 50% !important;
+}
+.ClH100p {
+  height: 100%;
+}
+
+
+.Buffor {
+  display: none !important;
+}
+
+
+.Relative {
+  position: relative;
+}
+
+.grid1 {
+  width: 25% !important;
+}
+.grid2 {
+  width: 50% !important;
+}
+.grid3 {
+  width: 75% !important;
+}
+
+
+
+
+
+
+.animOpacity {
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.animNone .animOpacity {
+  -webkit-transition: all .0s;
+  -moz-transition: all .0s;
+  -o-transition: all .0s;
+  transition: all .0s;
+}
+.animBoxOrder.show.animOpacity,
+.animBox.show.animOpacity,
+.animBoxOrder.show .animOpacity,
+.animBox.show .animOpacity {
+  opacity: 1;
+}
+
+.animOpacityFromBottom {
+  position: relative;
+  opacity: 0;
+  top: 20px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+}
+.animNone .animOpacityFromBottom {
+  -webkit-transition: all .0s;
+  -moz-transition: all .0s;
+  -o-transition: all .0s;
+  transition: all .0s;
+}
+
+.animBoxOrder.show .animOpacityFromBottom,
+.animBox.show .animOpacityFromBottom {
+  opacity: 1;
+  top: 0px;
+}
+
+.animOpacityZoom {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 4s;
+  -moz-transition: all 4s;
+  -o-transition: all 4s;
+  transition: all 4s;
+}
+.animNone .animOpacityZoom {
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+}
+.animBoxOrder.show .animOpacityZoom,
+.animBox.show .animOpacityZoom {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
+.animZoom {
+  position: relative;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 4s;
+  -moz-transition: -moz-transform 4s;
+  -o-transition: -o-transform 4s;
+  transition: transform 4s;
+}
+.animNone .animZoom {
+  -webkit-transition: -webkit-transform 0s;
+  -moz-transition: -moz-transform 0s;
+  -o-transition: -o-transform 0s;
+  transition: transform 0s;
+}
+.animBoxOrder.show .animZoom,
+.animBox.show .animZoom {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+.animBackground {
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  -webkit-transition: width .4s .6s;
+  -moz-transition: width .4s .6s;
+  -o-transition: width .4s .6s;
+  transition: width .4s .6s;
+}
+.animBoxOrder.show .animBackground,
+.animBox.show .animBackground,
+.animBoxOrder.show.animBackground,
+.animBox.show.animBackground {
+  width: 100%;
+  -webkit-transition: width .4s;
+  -moz-transition: width .4s;
+  -o-transition: width .4s;
+  transition: width .4s;
+}
+.animNone .animBoxOrder.show .animBackground,
+.animNone .animBox.show .animBackground,
+.animNone .animBoxOrder.show.animBackground,
+.animNone .animBox.show.animBackground {
+  -webkit-transition: width .0s;
+  -moz-transition: width .0s;
+  -o-transition: width .0s;
+  transition: width .0s;
+}
+
+.animBoxOrder.show .animDelay100 {
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  transition-delay: .1s;
+}
+.animBoxOrder.show .animDelay200 {
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  transition-delay: .2s;
+}
+.animBoxOrder.show .animDelay300 {
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.animBoxOrder.show .animDelay400 {
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  transition-delay: .4s;
+}
+.animBoxOrder.show .animDelay500 {
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  transition-delay: .5s;
+}
+.animBoxOrder.show .animDelay600 {
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  transition-delay: .6s;
+}
+.animBoxOrder.show .animDelay700 {
+  -webkit-transition-delay: .7s;
+  -moz-transition-delay: .7s;
+  transition-delay: .7s;
+}
+.animBoxOrder.show .animDelay800 {
+  -webkit-transition-delay: .8s;
+  -moz-transition-delay: .8s;
+  transition-delay: .8s;
+}
+.animBoxOrder.show .animDelay900 {
+  -webkit-transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  transition-delay: .9s;
+}
+.animBoxOrder.show .animDelay1000 {
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+.animNone .animBoxOrder.show .animDelay100,
+.animNone .animBoxOrder.show .animDelay200,
+.animNone .animBoxOrder.show .animDelay300,
+.animNone .animBoxOrder.show .animDelay400,
+.animNone .animBoxOrder.show .animDelay500,
+.animNone .animBoxOrder.show .animDelay600,
+.animNone .animBoxOrder.show .animDelay700,
+.animNone .animBoxOrder.show .animDelay800,
+.animNone .animBoxOrder.show .animDelay900,
+.animNone .animBoxOrder.show .animDelay1000 {
+  -webkit-transition-delay: 0s !important;
+  -moz-transition-delay: 0s !important;
+  transition-delay: 0s !important;
+}
+
+.animDelay100 {
+  -webkit-transition-delay: .05s;
+  -moz-transition-delay: .05s;
+  transition-delay: .05s;
+}
+.animDelay200 {
+  -webkit-transition-delay: .1s;
+  -moz-transition-delay: .1s;
+  transition-delay: .1s;
+}
+.animDelay300 {
+  -webkit-transition-delay: .15s;
+  -moz-transition-delay: .15s;
+  transition-delay: .15s;
+}
+.animDelay400 {
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  transition-delay: .2s;
+}
+.animDelay500 {
+  -webkit-transition-delay: .25s;
+  -moz-transition-delay: .25s;
+  transition-delay: .25s;
+}
+.animDelay600 {
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  transition-delay: .3s;
+}
+.animDelay700 {
+  -webkit-transition-delay: .35s;
+  -moz-transition-delay: .35s;
+  transition-delay: .35s;
+}
+.animDelay800 {
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  transition-delay: .4s;
+}
+.animDelay900 {
+  -webkit-transition-delay: .45s;
+  -moz-transition-delay: .45s;
+  transition-delay: .45s;
+}
+.animDelay1000 {
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  transition-delay: .5s;
+}
+
+.animNone .animDelay100,
+.animNone .animDelay200,
+.animNone .animDelay300,
+.animNone .animDelay400,
+.animNone .animDelay500,
+.animNone .animDelay600,
+.animNone .animDelay700,
+.animNone .animDelay800,
+.animNone .animDelay900,
+.animNone .animDelay1000 {
+  -webkit-transition-delay: 0s !important;
+  -moz-transition-delay: 0s !important;
+  transition-delay: 0s !important;
+}
+
+
+
+.backWhite {
+  background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+==== TRANSITIONS ====
+
+*/
+
+.pt-page {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+.pt-page-current,
+.no-js .pt-page {}
+.pt-page[data-active="active"] {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------
+   Loader
+   ------------ */
+
+.Loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: all .2s 1s;
+  -moz-transition: all .2s 1s;
+  -o-transition: all .2s 1s;
+  transition: all .2s 1s;
+}
+.LoaderStart .Loader {
+  z-index: 999;
+  opacity: 1;
+}
+
+.Loader .Background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+.Loader .Logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  margin-top: 3px;
+}
+
+
+
+
+
+
+#Contents {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f7f7f7;
+}
+#Contents .Content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  padding-left: 90px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+
+  overflow: hidden;
+  opacity: 0;
+
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#Contents .Content[data-template="home"] { padding-left: 0px; }*/
+
+#Contents .Content[data-active="active"] {
+  z-index: 2;
+  opacity: 1;
+}
+
+.Page {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  position: relative;
+  top: 0;
+}
+.Page .Slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.Container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+#Menu {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+
+  -webkit-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen) #Menu.fastHide {
+  -webkit-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+#Menu.fastHide .Step2 {
+  opacity: 0;
+  -webkit-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: opacity .2s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen):not(.menuClose) #Menu {
+  width: 90px !important;
+}
+
+#Menu .Step1,
+#Menu .Step2 {
+  width: 90px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+#Menu .Step1 {
+  left: 0;
+}
+#Menu .Step2 {
+  right: 0;
+}
+
+#Menu .Step1 {
+  opacity: 0;
+  -webkit-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen) #Menu .Step1 {
+  opacity: 1;
+  cursor: pointer;
+}
+body.menuOpen #Menu .Step1 {
+  pointer-events: none;
+}
+
+
+
+
+
+#Menu .Step2 {
+  opacity: 1;
+
+  -webkit-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen) #Menu .Step2 {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+body:not(.menuOpen) #Menu .Mask {
+  display: none;
+}
+#Menu .Mask {
+  display: block;
+  width: 9999px;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background: rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+body[data-content="strona-glowna"] #Menu .Mask {
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: background 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: background 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: background 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: background 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  pointer-events: none;
+}
+
+
+#Menu .BtSwitch .Lines {
+  width: 24px;
+  height: 15px;
+  position: relative;
+  -webkit-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  margin: 45px auto 0 auto;
+}
+#Menu .BtSwitch .Lines .Line1,
+#Menu .BtSwitch .Lines .Line2,
+#Menu .BtSwitch .Lines .Line3 {
+  position: absolute;
+  margin: auto;
+  width: 24px;
+  height: 3px;
+  background: #000;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  opacity: 1;
+  -webkit-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -ms-transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all 0.6s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+#Menu .BtSwitch .Lines .Line1 {
+  top: 0px;
+  right: 0;
+}
+#Menu .BtSwitch .Lines .Line2 {
+  top: 6px;
+  right: 0;
+}
+#Menu .BtSwitch .Lines .Line3 {
+  top: 12px;
+  right: 0;
+}
+
+
+#Menu .BtSwitch .Txt {
+  font-family: 'Gotham';
+  font-size: 11px;
+  text-transform: uppercase;
+  width: 9px;
+  margin: 30px auto 0 auto;
+  word-wrap: break-word;
+  line-height: 20px;
+  position: relative;
+
+  -webkit-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1) .4s;
+  -moz-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1) .4s;
+  -o-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1) .4s;
+  transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1) .4s;
+}
+body:not(.menuOpen) #Menu .BtSwitch .Txt {
+  opacity: 1;
+  top: 0px;
+}
+body.menuOpen #Menu .BtSwitch .Txt {
+  opacity: 0;
+  top: 20px;
+}
+
+#Menu .Status {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#Menu .Status div {
+  line-height: 40px;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+
+  -webkit-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen) #Menu .Status div {
+  opacity: 1;
+  top: 0px;
+}
+body.menuOpen #Menu .Status div {
+  opacity: 0;
+  top: 20px;
+}
+body:not(.menuOpen) #Menu .Status div {
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  transition-delay: .4s;
+}
+body:not(.menuOpen) #Menu .Status div+div {
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  transition-delay: .5s;
+}
+body:not(.menuOpen) #Menu .Status div+div+div {
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  transition-delay: .6s;
+}
+body:not(.menuOpen) #Menu .Status div+div+div+a {
+  -webkit-transition-delay: .7s;
+  -moz-transition-delay: .7s;
+  transition-delay: .7s;
+}
+body:not(.menuOpen) #Menu .Status div+div+div+div+a {
+  -webkit-transition-delay: .8s;
+  -moz-transition-delay: .8s;
+  transition-delay: .8s;
+}
+body:not(.menuOpen) #Menu .Status div+div+div+div+div+div {
+  -webkit-transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  transition-delay: .9s;
+}
+
+
+
+
+#Menu .Status div.active {
+  font-weight: 500;
+}
+#Menu .Status div.active:before {
+  content: '.';
+  width: 10px;
+  height: 26px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+  background: #000;
+}
+
+#Menu .Inside {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#Menu .Step2 .Logo {
+  display: block;
+  width: 240px;
+  margin: 120px auto 120px auto;
+  position: relative;
+  -webkit-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body:not(.menuOpen) #Menu .Step2 .Logo {
+  opacity: 0;
+  top: 20px;
+}
+body.menuOpen #Menu .Step2 .Logo,
+body.menuClose #Menu .Step2 .Logo {
+  opacity: 1;
+  top: 0px;
+  -webkit-transition-delay: .3s;
+  -moz-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
+#Menu .Step2 .Author {
+  display: block;
+  width: 130px;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  margin-left: -65px;
+  font-family: 'Gotham Book';
+  font-size: 9px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 14px;
+  color: #b0b0b0;
+}
+#Menu .Step2 .Author:hover div {
+  color: #000000;
+}
+
+#Menu .Step2 .Links {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+#Menu .Step2 .Links a {
+  display: block;
+  height: 40px;
+  text-decoration: none;
+  position: relative;
+}
+#Menu .Step2 .Links a.Pdf {
+  margin-top: 20px;
+}
+#Menu .Step2 .Links a .Title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 11px;
+  color: #000;
+  text-transform: uppercase;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding-right: 25px;
+  letter-spacing: 2px;
+}
+#Menu .Step2 .Links a:hover .Title,
+body[data-content="strona-glowna"] #Menu .Step2 .Links a[data-content="strona-glowna"] .Title,
+body[data-content="o-inwestycji"] #Menu .Step2 .Links a[data-content="o-inwestycji"] .Title,
+body[data-content="galeria"] #Menu .Step2 .Links a[data-content="galeria"] .Title,
+body[data-content="lokalizacja"] #Menu .Step2 .Links a[data-content="lokalizacja"] .Title,
+body[data-content="o-nas"] #Menu .Step2 .Links a[data-content="o-nas"] .Title,
+body[data-content="plan-osiedla"] #Menu .Step2 .Links a[data-content="plan-osiedla"] .Title,
+body[data-content="kontakt"] #Menu .Step2 .Links a[data-content="kontakt"] .Title {
+  color: #b0b0b0;
+}
+#Menu .Step2 .Links a .Number {
+  height: 40px;
+  line-height: 40px;
+  font-size: 10px;
+  text-align: right;
+  color: #b0b0b0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  padding-left: 25px;
+}
+#Menu .Step2 .Links a .Number svg {
+  position: relative;
+  top: 10px;
+}
+#Menu .Step2 .Links a .Number svg.Normal,
+#Menu .Step2 .Links a:hover .Number svg.Hover {
+  display: block;
+}
+#Menu .Step2 .Links a:hover .Number svg.Normal,
+#Menu .Step2 .Links a .Number svg.Hover {
+  display: none;
+}
+#Menu .Step2 .Links a .Line {
+  width: 100%;
+  height: 1px;
+  background: url('../img/Line.png') center center repeat-x;
+  position: absolute;
+  top: 19px;
+}
+
+
+
+
+#Menu .Step2 .Links a {
+  position: relative;
+  -webkit-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+#Menu .Step2 .Links a[data-content="strona-glowna"] {
+  display: none;
+}
+body:not(.menuOpen) #Menu .Step2 .Links a {
+  opacity: 0;
+  top: 20px;
+}
+body.menuOpen #Menu .Step2 .Links a,
+body.menuClose #Menu .Step2 .Links a {
+  opacity: 1;
+  top: 0px;
+  -webkit-transition-delay: .4s;
+  -moz-transition-delay: .4s;
+  transition-delay: .4s;
+}
+body.menuOpen #Menu .Step2 .Links a+a {
+  -webkit-transition-delay: .5s;
+  -moz-transition-delay: .5s;
+  transition-delay: .5s;
+}
+body.menuOpen #Menu .Step2 .Links a+a+a {
+  -webkit-transition-delay: .6s;
+  -moz-transition-delay: .6s;
+  transition-delay: .6s;
+}
+body.menuOpen #Menu .Step2 .Links a+a+a+a {
+  -webkit-transition-delay: .7s;
+  -moz-transition-delay: .7s;
+  transition-delay: .7s;
+}
+body.menuOpen #Menu .Step2 .Links a+a+a+a+a {
+  -webkit-transition-delay: .8s;
+  -moz-transition-delay: .8s;
+  transition-delay: .8s;
+}
+body.menuOpen #Menu .Step2 .Links a+a+a+a+a+a {
+  -webkit-transition-delay: .9s;
+  -moz-transition-delay: .9s;
+  transition-delay: .9s;
+}
+body.menuOpen #Menu .Step2 .Links a+a+a+a+a+a+a {
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+
+@media screen and (max-width: 1200px) {
+  #Menu .Step2 .Logo {
+    width: 170px;
+  }
+  #Menu .Step2 .Links {
+    width: 65%;
+  }
+}
+
+
+@media screen and (max-height: 900px) {
+  #Menu .Step2 .Logo {
+    margin: 180px auto 180px auto;
+  }
+}
+@media screen and (max-height: 850px) {
+  #Menu .Step2 .Logo {
+    margin: 140px auto 140px auto;
+  }
+}
+@media screen and (max-height: 800px) {
+  #Menu .Step2 .Logo {
+    margin: 125px auto 125px auto;
+  }
+}
+@media screen and (max-height: 750px) {
+  #Menu .Step2 .Logo {
+    margin: 110px auto 110px auto;
+  }
+}
+@media screen and (max-height: 700px) {
+  #Menu .Step2 .Logo {
+    margin: 95px auto 95px auto;
+  }
+}
+@media screen and (max-height: 650px) {
+  #Menu .Step2 .Logo {
+    margin: 70px auto 70px auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.PhotoContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.PhotoContainer.animBackground {
+  width: 0%;
+}
+.PhotoContainer .Photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+
+.CountContainer {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 1;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.CountContainer .Number {
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #000;
+  opacity: 0;
+  -webkit-transition: opacity .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: opacity .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: opacity .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: opacity .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.CountContainer.After .Number {
+  padding-left: 40px;
+}
+.animBoxOrder.show .CountContainer .Number,
+.animBox.show .CountContainer .Number,
+.animPermBox .CountContainer .Number {
+  opacity: 1;
+}
+
+.CountContainer .Txt {
+  display: inline-block;
+}
+.CountContainer .Line {
+  display: inline-block;
+  width: 0px;
+  height: 1px;
+  background: #000000;
+  position: relative;
+  left: 10px;
+  top: -3px;
+  -webkit-transition: width .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: width .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: width .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: width .3s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+
+.animNone .CountContainer .Line {
+  -webkit-transition: width 0s;
+  -moz-transition: width 0s;
+  -o-transition: width 0s;
+  transition: width 0s;
+}
+.CountContainer.After .Line {
+  left: 60px;
+}
+.animBoxOrder.show .CountContainer .Line,
+.animBox.show .CountContainer .Line,
+.animPermBox .CountContainer .Line {
+  width: 30px;
+}
+
+.CountContainer.After .Line {
+  position: absolute;
+  top: 6px;
+}
+
+.MapContainer {
+  height: 100%;
+  background: #e8e8e8;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+}
+.MapContainer.fullScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 90px;
+  z-index: 3;
+}
+.MapContainer .Map {
+  width: 100%;
+  height: 100%;
+}
+.MapContainer.fullScreen .Map {
+  width: 100% !important;
+}
+.MapContainer .BtFullScreen {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+  text-align: center;
+}
+.MapContainer.fullScreen .BtFullScreen {
+  left: 90px;
+}
+.MapContainer .BtFullScreen svg {
+  position: relative;
+  top: 3px;
+}
+.MapContainer .BtFullScreen svg rect.Out {
+  stroke: #000000;
+}
+.MapContainer .BtFullScreen svg rect.In {
+  fill: #000000;
+}
+
+.MapContainer .BtFullScreen:hover {
+  background: #000;
+}
+.MapContainer .BtFullScreen:hover svg rect.Out {
+  stroke: #fff;
+}
+.MapContainer .BtFullScreen:hover svg rect.In {
+  fill: #fff;
+}
+
+
+.MapContainer .infoBox {
+  -webkit-animation: infoBoxAnim .35s ease both;
+  animation: infoBoxAnim .35s ease both;
+  cursor: pointer;
+}
+@-webkit-keyframes infoBoxAnim {
+  from {
+    margin-top: 30px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes infoBoxAnim {
+  from {
+    margin-top: 30px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+
+.MapContainer .infoBox img {
+  display: none !important;
+}
+.MapContainer .infoBox .White {
+  background: #fff;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+.MapContainer .infoBox .Name {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+.MapContainer .infoBox .Distance {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 17px;
+  white-space: nowrap;
+  color: #909090;
+}
+.MapContainer .infoBoxInside {
+  position: relative;
+  top: -45px;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin-left: -3px;
+}
+
+
+
+
+
+
+
+.Page.Home .Slider {
+  width: 75%;
+  height: 100%;
+  margin-left: 25%;
+  position: relative;
+}
+
+.Page.Home .Photo {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Home .Photo.active {
+  opacity: 1;
+}
+.Page.Home .Photo1 {
+  background-image: url('../assets/home/Pic1.jpg?1');
+}
+.Page.Home .Photo2 {
+  background-image: url('../assets/home/Pic2.jpg?1');
+}
+.Page.Home .Photo3 {
+  background-image: url('../assets/home/Pic3.jpg?1');
+}
+.Page.Home .Photo .Text {
+  line-height: 60px;
+  font-size: 50px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Page.Home .Photo .Text sup {
+  font-size: 35px;
+  line-height: 30px;
+}
+.Page.Home .SliderNavArrow .Side {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.Page.Home .SliderNavArrow .Prev {
+  left: 0;
+  cursor: url(../img/CursorPrev.svg) 4.5 20, auto;
+}
+.Page.Home .SliderNavArrow .Next {
+  right: 0;
+  cursor: url(../img/CursorNext.svg) 4.5 20, auto;
+}
+.Page.Home .SliderNav {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+  z-index: 2;
+  cursor: default;
+}
+.Page.Home .SliderNav a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  float: left;
+  padding: 6px;
+}
+.Page.Home .SliderNav a::before {
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: ".";
+  border: 1px solid #fff;
+  background: transparent;
+  -webkit-border-radius: 99px;
+  -moz-border-radius: 99px;
+  border-radius: 99px;
+  text-indent: -99999px;
+}
+.Page.Home .SliderNav a.active::before,
+.Page.Home .SliderNav a:hover::before {
+  background: #fff;
+  ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*usunac ponizej*/
+
+
+/* Investment */
+
+.Page.Investment .Center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-top: 20px;
+  z-index: 1;
+}
+.Page.Investment .Title {
+  display: inline-block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.Page.Investment .Text {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 10.5px;
+  line-height: 17px;
+  text-align: left;
+}
+
+.Page.Investment .Box1 .Photo {
+  background-image: url('../assets/investment/Pic1.jpg?2');
+  background-position: top center;
+
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body.pcJS .Page.Investment .Box1:hover .Photo {
+  padding: 6px;
+  margin: -6px 0 0 -6px;
+}
+.Page.Investment .Box2 .Photo {
+  background-image: url('../assets/investment/Pic2.jpg');
+  background-size: contain;
+
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body.pcJS .Page.Investment .Box2:hover .Photo {
+  padding: 6px;
+  margin: -6px 0 0 -6px;
+}
+.Page.Investment .Box4 {
+  float: right;
+}
+.Page.Investment .Box4 .Photo {
+  background-image: url('../assets/investment/Pic3.jpg');
+
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+body.pcJS .Page.Investment .Box4:hover .Photo {
+  padding: 6px;
+  margin: -6px 0 0 -6px;
+}
+
+
+@media screen and (max-height: 750px) {
+  .Page.Investment .Center {
+    padding: 0 15px !important;
+  }
+  .pcJS .Page.Investment .Text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-height: 770px) {
+  .Page.Investment .Center {
+    padding: 0 20px !important;
+  }
+  .pcJS .Page.Investment .Text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Floorplans */
+
+.Page.Floorplans .BuildingDatas {
+  width: 100%;
+  height: 347px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.Page.Floorplans .BuildingData {
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+  padding: 100px 60px 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .5s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Floorplans .BuildingData.active {
+  opacity: 1;
+}
+
+
+
+.Page.Floorplans .BuildingData .Title {
+  display: block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 85px;
+  line-height: 85px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  position: absolute;
+  top: 0;
+
+  opacity: 0;
+  margin-top: 0px;
+  -webkit-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Floorplans .BuildingData.active .Title {
+  opacity: 1;
+}
+.Page.Floorplans .BuildingData.start .Title {
+  margin-top: 20px;
+  opacity: 0 !important;
+}
+.Page.Floorplans .BuildingData.end .Title {
+  margin-top: -20px;
+  opacity: 0 !important;
+}
+
+
+
+
+.Page.Floorplans .BuildingData .Data {
+  margin-bottom: 10px;
+}
+.Page.Floorplans .BuildingData .Data .Value {
+  font-family: 'Gotham';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  color: #000;
+}
+.Page.Floorplans .BuildingData .Data .Type {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+  color: #a3a3a3;
+}
+.Page.Floorplans .BuildingData .Reservation {
+  display: inline;
+  background: #000;
+  color: #fff;
+  padding: 6px 8px;
+  top: 20px;
+  position: relative;
+}
+
+
+.Page.Floorplans .Legend {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  z-index: 1;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  -webkit-transition: all .5s 0s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .5s 0s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .5s 0s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .5s 0s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Floorplans[data-view="Buildings"] .show .Legend {
+  opacity: 1;
+}
+.Page.Floorplans[data-view="Floors"] .Legend {
+  opacity: 0;
+}
+
+.Page.Floorplans .Legend .Color {
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+.Page.Floorplans .Legend .Type {
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.Page.Floorplans .Legend .Type.Sold .Color {
+  background-color: #434343;
+}
+.Page.Floorplans .Legend .Type.Available .Color {
+  background-color: #e1e1e1;
+}
+.Page.Floorplans .Legend .Text {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+  color: #000;
+  padding-left: 25px;
+}
+
+.Page.Floorplans .Bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  z-index: 1;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.Page.Floorplans .Bottom .Desc {
+  font-family: 'Gotham Book';
+  font-size: 11px;
+  color: #7e7e7e;
+  margin-bottom: 10px;
+}
+
+.Page.Floorplans .Bottom .Floors,
+.Page.Floorplans .Bottom .DownloadPdf {
+  float: left;
+  opacity: 0;
+
+  -webkit-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Floorplans .Bottom .DownloadPdf {
+  float: right;
+  margin-top: 40px;
+}
+.Content[data-active="active"] .Page.Floorplans[data-view="Floors"] .Bottom .Floors,
+.Content[data-active="active"] .Page.Floorplans[data-view="Floors"] .Bottom .DownloadPdf {
+  opacity: 1;
+}
+
+
+.Page.Floorplans .Bottom .Floors {
+  margin: 0 20px 20px 0;
+}
+
+
+.Page.Floorplans .Bt {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #d4d4d4;
+
+  font-family: 'Gotham';
+  font-weight: 500;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none;
+}
+.Page.Floorplans .Bt:hover,
+.Page.Floorplans .Bt.active {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+.Page.Floorplans .Floors .Bt {
+  width: 70px;
+}
+.Page.Floorplans .Bt svg {
+  position: relative;
+  top: 3px;
+  padding-right: 10px;
+}
+.Page.Floorplans .Bt:hover svg,
+.Page.Floorplans .Bt.active svg {
+  fill: #ffffff;
+}
+
+
+
+
+
+.Page.Floorplans .ClLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.Page.Floorplans[data-view="Buildings"] .ClLeft {
+  left: -25%;
+  -webkit-transition: left .4s 1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: left .4s 1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: left .4s 1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: left .4s 1s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Floorplans[data-view="Floors"] .ClLeft {
+  left: 0%;
+  -webkit-transition: left .4s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: left .4s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: left .4s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: left .4s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+
+.Page.Floorplans .ClLeft .Background {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.Page.Floorplans .ClRight {
+  overflow: hidden;
+  float: right;
+}
+
+.Page.Floorplans .Relative {
+  height: 100%;
+}
+
+
+
+.Page.Floorplans .View {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  -webkit-transition: width .4s 0s, z-index 1s 0s;
+  -moz-transition: width .4s 0s, z-index 1s 0s;
+  -o-transition: width .4s 0s, z-index 1s 0s;
+  transition: width .4s 0s, z-index 1s 0s;
+}
+.Page.Floorplans .View.Buildings.active {
+  width: 100%;
+  z-index: 1;
+
+  -webkit-transition: width .4s 0s, z-index 0s 1s;
+  -moz-transition: width .4s 0s, z-index 0s 1s;
+  -o-transition: width .4s 0s, z-index 0s 1s;
+  transition: width .4s 0s, z-index 0s 1s;
+}
+
+
+
+
+
+.Page.Floorplans .View.Floors {
+  width: 0%;
+  left: 25%;
+  opacity: 0;
+  overflow: hidden;
+
+  -webkit-transition: width 1s 0s, opacity .5s 0s;
+  -moz-transition: width 1s 0s, opacity .5s 0s;
+  -o-transition: width 1s 0s, opacity .5s 0s;
+  transition: width 1s 0s, opacity .5s 0s;
+}
+.Page.Floorplans .View.Floors.active {
+  width: 75%;
+  opacity: 1;
+  z-index: 1;
+  -webkit-transition: width 1s .4s, opacity .5s .4s;
+  -moz-transition: width 1s .4s, opacity .5s .4s;
+  -o-transition: width 1s .4s, opacity .5s .4s;
+  transition: width 1s .4s, opacity .5s .4s;
+}
+
+.Page.Floorplans .View.Buildings .Header {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  z-index: 2;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.Page.Floorplans .View.Buildings .InfoBlocked {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  pointer-events: none;
+  margin: -40px 0px 0 10px;
+}
+.Page.Floorplans .View.Buildings .InfoBlocked.on {
+  display: block;
+}
+.Page.Floorplans .View.Buildings .InfoBlocked .Text {
+  line-height: 35px;
+  font-weight: normal;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background: #649061;
+  padding: 0 10px;
+  letter-spacing: 1px;
+}
+.Page.Floorplans .View.Buildings .InfoBlocked .Arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #649061;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.Page.Floorplans .View .Buildings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+.Page.Floorplans .View .Buildings .Spot {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  z-index: 0;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="1"] {
+  top: 780px;
+  left: 460px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="2"] {
+  top: 745px;
+  left: 540px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="3"] {
+  top: 690px;
+  left: 685px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="4"] {
+  top: 655px;
+  left: 770px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="5"] {
+  top: 590px;
+  left: 910px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="6"] {
+  top: 560px;
+  left: 990px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="7"] {
+  top: 430px;
+  left: 1290px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="8"] {
+  top: 400px;
+  left: 1365px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="9"] {
+  top: 340px;
+  left: 1490px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="10"] {
+  top: 310px;
+  left: 1570px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="11"] {
+  top: 310px;
+  left: 1570px;
+}
+.Page.Floorplans .View .Buildings .Spot[data-building="12"] {
+  top: 220px;
+  left: 1780px;
+}
+
+
+
+.Page.Floorplans .View.Floors .Floors {
+  display: none;
+}
+.Page.Floorplans .View.Floors .Close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1;
+}
+.Page.Floorplans .View.Floors .Close {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #d4d4d4;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none;
+}
+.Page.Floorplans .View.Floors .Close:hover {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+/* .Page.Floorplans .View.Floors .Close svg {
+  stroke: #000;
+}
+.Page.Floorplans .View.Floors .Close:hover svg circle {
+  fill: #000;
+}
+.Page.Floorplans .View.Floors .Close:hover svg line {
+  stroke: #fff;
+} */
+
+.Page.Floorplans .View.Floors .Zoom {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1;
+}
+.Page.Floorplans .View.Floors .Zoom.eventOff {
+  pointer-events: none;
+}
+/* .Page.Floorplans .View.Floors .Zoom svg {
+  stroke: #000;
+}
+.Page.Floorplans .View.Floors .Zoom:hover svg circle,
+.Page.Floorplans .View.Floors .Zoom.on svg circle {
+  fill: #000;
+}
+.Page.Floorplans .View.Floors .Zoom:hover svg line,
+.Page.Floorplans .View.Floors .Zoom.on svg line {
+  stroke: #fff;
+} */
+
+.Page.Floorplans .View.Floors .Zoom {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #d4d4d4;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none;
+}
+.Page.Floorplans .View.Floors .Zoom:hover,
+.Page.Floorplans .View.Floors .Zoom.on {
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+
+.Page.Floorplans .View.Floors .Floor {
+  display: none;
+  width: calc(100vw - 90px - (100vw - 90px) / 4);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Page.Floorplans .View.Floors .Floor .Background {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Page.Floorplans .View.Floors .Floor.active {
+  display: block;
+}
+
+
+/*.Page.Floorplans .View.Floors .Floor.onZoom .Background {
+  background: transparent !important;
+}*/
+
+.Page.Floorplans .View.Floors .Floor img {
+  display: none;
+}
+.Page.Floorplans .View.Floors .Floor .zoomImg {
+  display: block;
+}
+.Page.Floorplans .View.Floors .Floor img::selection {
+  background-color: transparent;
+}
+
+#ex2 img:hover {
+  cursor: url(grab.cur), default;
+}
+#ex2 img:active {
+  cursor: url(grabbed.cur), default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Location */
+
+.Page.Location {
+  padding-bottom: 170px;
+}
+.Page.Location .Bottom {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+.Page.Location .borderR {
+  border-right: 1px solid transparent;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: border .6s;
+  -moz-transition: border .6s;
+  -o-transition: border .6s;
+  transition: border .6s;
+}
+.Page.Location .animBox.show .borderR {
+  border-right: 1px solid #e5e5e5;
+}
+
+
+
+
+.Page.Location .Center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.Page.Location .Title {
+  display: block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.Page.Location .Text {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+}
+.Page.Location .Logo {
+  width: 140px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.Page.Location .Target {
+  width: 70%;
+  float: left;
+}
+.Page.Location .Time {
+  width: 30%;
+  float: right;
+  padding: 0 40px 0 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.Page.Location .BtTarget {
+  color: #909090;
+}
+.Page.Location .BtTarget:hover {
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Developer */
+
+.Page.Developer .Center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-top: 20px;
+  z-index: 1;
+}
+.Page.Developer .Title {
+  display: inline-block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.Page.Developer .Text {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 10.5px;
+  line-height: 17px;
+  text-align: left;
+}
+.Page.Developer .Box2 .Photo {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Developer .Box2 .Photo.active {
+  opacity: 1;
+  z-index: 2;
+}
+.Page.Developer .Box2 .Photo1 {
+  background-image: url('../assets/developer/Pic1a.jpg');
+}
+.Page.Developer .Box2 .Photo2 {
+  background-image: url('../assets/developer/Pic1b.jpg');
+}
+.Page.Developer .Box2 .Photo3 {
+  background-image: url('../assets/developer/Pic1c.jpg');
+}
+body.pcJS .Page.Developer .Box2:hover .Photo {
+  padding: 6px;
+  margin: -6px 0 0 -6px;
+}
+.Page.Developer .Box4 {
+  float: right;
+}
+.Page.Developer .Box3 .Photo {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: -moz-transitiontransform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: -o-transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: transform 4s, padding .35s cubic-bezier(0.62, 0.01, 0.51, 1), margin .35s cubic-bezier(0.62, 0.01, 0.51, 1), opacity .7s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Developer .Box3 .Photo.active {
+  opacity: 1;
+  z-index: 2;
+}
+.Page.Developer .Box3 .Photo1 {
+  background-image: url('../assets/developer/Pic2a.jpg');
+}
+.Page.Developer .Box3 .Photo2 {
+  background-image: url('../assets/developer/Pic2b.jpg');
+}
+body.pcJS .Page.Developer .Box3:hover .Photo {
+  padding: 6px;
+  margin: -6px 0 0 -6px;
+}
+.Page.Developer .SliderItem {
+  cursor: pointer;
+}
+
+#SliderFull {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+    z-index: 999;
+}
+#SliderFull.open {
+  display: block;
+}
+#SliderFull .CloseReal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#SliderFull .Close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 1;
+}
+#SliderFull .Close svg {
+  stroke: #000;
+}
+#SliderFull .Close:hover svg circle {
+  fill: #000;
+}
+#SliderFull .Close:hover svg line {
+  stroke: #fff;
+}
+
+
+.Page.Developer .SliderNav {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, .4);
+  -webkit-border-radius: 99px;
+  -moz-border-radius: 99px;
+  border-radius: 99px;
+}
+.Page.Developer .SliderNav a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  float: left;
+  padding: 6px;
+}
+.Page.Developer .SliderNav a::before {
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: ".";
+  background: #fff;
+  -webkit-border-radius: 99px;
+  -moz-border-radius: 99px;
+  border-radius: 99px;
+  text-indent: -99999px;
+}
+.Page.Developer .SliderNav a.active::before,
+.Page.Developer .SliderNav a:hover::before {
+  background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery */
+
+.Page.Gallery {
+  overflow: hidden !important;
+  background: transparent;
+
+  -webkit-transition: background .4s;
+  -moz-transition: background .4s;
+  -o-transition: background .4s;
+  transition: background .4s;
+}
+.Content[data-template="gallery"][data-active="active"] .Page.Gallery {
+  background: #fff;
+}
+
+.Page.Gallery .View {
+  width: 100%;
+  height: 100%;
+  /*    background: #fff;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.Page.Gallery .View.active {
+  z-index: 1;
+  opacity: 1;
+}
+
+
+
+
+.Page.Gallery .View.Mosaic .Top,
+.Page.Gallery .View.Mosaic .Bottom {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  /*    background: #fff;*/
+}
+.Page.Gallery .View.Mosaic .Top {
+  top: 0;
+}
+.Page.Gallery .View.Mosaic .Bottom {
+  bottom: 0;
+}
+.Page.Gallery .View.Mosaic .Center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.Page.Gallery .View.Mosaic .Title {
+  display: block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  float: left;
+}
+.Page.Gallery .ViewMode {
+  width: 161px;
+  height: 20%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 60px;
+}
+.Page.Gallery .ViewMode .Center {
+  position: relative;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.Page.Gallery .ViewMode span {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 11px;
+  text-align: right;
+  position: relative;
+  top: -5px;
+}
+.Page.Gallery[data-mode="mosaic"] .ViewMode span {
+  color: #000;
+}
+.Page.Gallery[data-mode="full"] .ViewMode span {
+  color: #fff;
+}
+.Page.Gallery .ViewMode a {
+  display: inline-block;
+  margin: 0 5px;
+}
+.Page.Gallery[data-mode="mosaic"] .ViewMode a svg {
+  fill: #000;
+}
+.Page.Gallery[data-mode="full"] .ViewMode a svg {
+  fill: #fff;
+}
+
+.Page.Gallery[data-mode="mosaic"] .ViewMode a[data-mode="mosaic"],
+.Page.Gallery[data-mode="full"] .ViewMode a[data-mode="full"] {
+  opacity: .5;
+  cursor: default;
+  pointer-events: none;
+}
+.Page.Gallery .ViewMode a:hover svg {
+  fill: #8c8c8c;
+}
+
+
+
+
+
+
+.Page.Gallery .View.Mosaic .Nav a {
+  display: block;
+  float: left;
+  position: relative;
+}
+.Page.Gallery .ViewMode a svg {
+  fill: #000;
+}
+.Page.Gallery .ViewMode a.on svg,
+.Page.Gallery .ViewMode a:hover svg {
+  fill: #8c8c8c;
+}
+
+
+.Page.Gallery .View.Mosaic .Nav a:hover {
+  animation: BtAnim 0.3s linear forwards;
+  -moz-animation: BtAnim 0.3s linear forwards;
+  -webkit-animation: BtAnim 0.3s linear forwards;
+  -o-animation: BtAnim 0.3s linear forwards;
+}
+@keyframes BtAnim {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  30% {
+    top: -10px;
+    opacity: 0;
+  }
+  60% {
+    top: 10px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+
+.Page.Gallery .View.Mosaic .Nav .Line {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: url('../img/Line.png') center center repeat-x;
+  float: left;
+  margin: 15px 10px;
+}
+
+
+
+
+.Page.Gallery .View.Mosaic .Items {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  top: 20%;
+  left: 0;
+  -webkit-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Gallery .View.Mosaic .ItemsScroll {
+  width: 100%;
+  height: 100%;
+}
+
+.Page.Gallery .View.Mosaic .Photo {
+  width: 300px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  cursor: pointer;
+}
+.Page.Gallery .View.Mosaic .Photo .Relative {
+  width: 100%;
+  height: 100%;
+}
+.Page.Gallery .View.Mosaic .Photo .CountContainer {
+  top: 40px;
+  padding: 0 40px;
+}
+.Page.Gallery .View.Mosaic .Photo .Icon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  opacity: 0;
+  background: url('../img/IconZoom.svg') center center no-repeat;
+  -webkit-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: all .1s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: all .1scubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Gallery .View.Mosaic .Photo:hover .Icon {
+  top: 0;
+  opacity: 1;
+}
+.Page.Gallery .View.Mosaic .Photo .Pic {
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Page.Gallery .View.Mosaic .Photo1 .Pic {
+  background-image: url('../assets/gallery/Photo1Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo2 .Pic {
+  background-image: url('../assets/gallery/Photo2Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo3 .Pic {
+  background-image: url('../assets/gallery/Photo3Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo4 .Pic {
+  background-image: url('../assets/gallery/Photo4Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo5 .Pic {
+  background-image: url('../assets/gallery/Photo5Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo6 .Pic {
+  background-image: url('../assets/gallery/Photo6Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo7 .Pic {
+  background-image: url('../assets/gallery/Photo7Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo8 .Pic {
+  background-image: url('../assets/gallery/Photo8Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo9 .Pic {
+  background-image: url('../assets/gallery/Photo9Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo10 .Pic {
+  background-image: url('../assets/gallery/Photo10Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo11 .Pic {
+  background-image: url('../assets/gallery/Photo11Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo12 .Pic {
+  background-image: url('../assets/gallery/Photo12Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo13 .Pic {
+  background-image: url('../assets/gallery/Photo13Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo14 .Pic {
+  background-image: url('../assets/gallery/Photo14Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo15 .Pic {
+  background-image: url('../assets/gallery/Photo15Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo16 .Pic {
+  background-image: url('../assets/gallery/Photo16Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo17 .Pic {
+  background-image: url('../assets/gallery/Photo17Small.jpg');
+}
+.Page.Gallery .View.Mosaic .Photo18 .Pic {
+  background-image: url('../assets/gallery/Photo18Small.jpg');
+}
+
+.Page.Gallery .View.Mosaic .MargL25 {
+  margin-left: 25px;
+}
+.Page.Gallery .View.Mosaic .MargL50 {
+  margin-left: 50px;
+}
+.Page.Gallery .View.Mosaic .MargR25 {
+  margin-right: 25px;
+}
+.Page.Gallery .View.Mosaic .MargR50 {
+  margin-right: 50px;
+}
+
+.Page.Gallery .View.Mosaic .PadT25 {
+  padding-top: 25px;
+}
+.Page.Gallery .View.Mosaic .PadB25 {
+  padding-bottom: 25px;
+}
+.Page.Gallery .View.Mosaic .PadL25 {
+  padding-left: 25px;
+}
+.Page.Gallery .View.Mosaic .PadR25 {
+  padding-right: 25px;
+}
+
+
+.Page.Gallery .View.Full {
+  background: #000;
+}
+.Page.Gallery .View.Full .Hint {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 40px;
+  left: 120px;
+  color: #fff;
+}
+.Page.Gallery .View.Full .Hint svg,
+.Page.Gallery .View.Full .Hint span {
+  float: left;
+}
+.Page.Gallery .View.Full .Hint svg {
+  margin-right: 20px;
+}
+.Page.Gallery .View.Full .Hint span {
+  line-height: 60px;
+}
+.Page.Gallery .View.Full .Items {
+  width: 99999px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: left .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Gallery .View.Full .Photo {
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+  background: #000;
+}
+.Page.Gallery .View.Full .Photo .Pic {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .35;
+  -webkit-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -moz-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  -o-transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+  transition: opacity .35s cubic-bezier(0.62, 0.01, 0.51, 1);
+}
+.Page.Gallery .View.Full .Photo.active .Pic {
+  opacity: 1;
+}
+.Page.Gallery .View.Full .Photo1 .Pic {
+  background-image: url('../assets/gallery/Photo1.jpg');
+}
+.Page.Gallery .View.Full .Photo2 .Pic {
+  background-image: url('../assets/gallery/Photo2.jpg');
+}
+.Page.Gallery .View.Full .Photo3 .Pic {
+  background-image: url('../assets/gallery/Photo3.jpg');
+}
+.Page.Gallery .View.Full .Photo4 .Pic {
+  background-image: url('../assets/gallery/Photo4.jpg');
+}
+.Page.Gallery .View.Full .Photo5 .Pic {
+  background-image: url('../assets/gallery/Photo5.jpg');
+}
+.Page.Gallery .View.Full .Photo6 .Pic {
+  background-image: url('../assets/gallery/Photo6.jpg');
+}
+.Page.Gallery .View.Full .Photo7 .Pic {
+  background-image: url('../assets/gallery/Photo7.jpg');
+}
+.Page.Gallery .View.Full .Photo8 .Pic {
+  background-image: url('../assets/gallery/Photo8.jpg');
+}
+.Page.Gallery .View.Full .Photo9 .Pic {
+  background-image: url('../assets/gallery/Photo9.jpg');
+}
+.Page.Gallery .View.Full .Photo10 .Pic {
+  background-image: url('../assets/gallery/Photo10.jpg');
+}
+.Page.Gallery .View.Full .Photo11 .Pic {
+  background-image: url('../assets/gallery/Photo11.jpg');
+}
+.Page.Gallery .View.Full .Photo12 .Pic {
+  background-image: url('../assets/gallery/Photo12.jpg');
+}
+.Page.Gallery .View.Full .Photo13 .Pic {
+  background-image: url('../assets/gallery/Photo13.jpg');
+}
+.Page.Gallery .View.Full .Photo14 .Pic {
+  background-image: url('../assets/gallery/Photo14.jpg');
+}
+.Page.Gallery .View.Full .Photo15 .Pic {
+  background-image: url('../assets/gallery/Photo15.jpg');
+}
+.Page.Gallery .View.Full .Photo16 .Pic {
+  background-image: url('../assets/gallery/Photo16.jpg');
+}
+.Page.Gallery .View.Full .Photo17 .Pic {
+  background-image: url('../assets/gallery/Photo17.jpg');
+}
+.Page.Gallery .View.Full .Photo18 .Pic {
+  background-image: url('../assets/gallery/Photo18.jpg');
+}
+
+.Page.Gallery .View.Full .Nav {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.Page.Gallery .View.Full .Nav a {
+  display: block;
+  height: 100%;
+  float: left;
+  cursor: none;
+  position: relative;
+}
+.Page.Gallery .View.Full .Nav a .Hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.Page.Gallery .View.Full .Nav a.Prev,
+.Page.Gallery .View.Full .Nav a.Next {
+  width: 30%;
+}
+.Page.Gallery .View.Full .Nav a.Close {
+  width: 40%;
+}
+.Page.Gallery .View.Full .Nav a .Icon {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+}
+.Page.Gallery .View.Full .Nav a .Icon {
+  margin: -30px 0 0 -30px;
+}
+.Page.Gallery .View.Full .Nav a:hover .Icon {
+  opacity: 1;
+}
+.Page.Gallery .View.Full .Nav a .Icon svg {
+  stroke: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact */
+
+.Page.Contact .Center {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 0 60px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin-top: 20px;
+}
+.Page.Contact .TableCell {
+  position: relative;
+  z-index: 1;
+  padding: 0 35px;
+}
+.Page.Contact .Center.MarginNone {
+  margin-top: 0;
+}
+.Page.Contact .Icon {
+  margin-bottom: 25px;
+}
+.Page.Contact .Title {
+  display: block;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 3px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.Page.Contact .Text {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+}
+.Page.Contact .Box3 .Photo {
+  background-image: url('../assets/contact/Pic1.jpg');
+  background-position: top center;
+}
+
+.Page.Contact .Box2 .ClText {
+  bottom: 0;
+  position: absolute;
+}
+.Page.Contact a {
+  color: #000;
+  text-decoration: none;
+}
+.Page.Contact a:hover:not(.Phone) {
+  text-decoration: underline;
+}
+body.computer .Page.Contact a.Phone {
+  pointer-events: none;
+}
+
+.Page.Contact .Enter {
+  height: 20px;
+}
+.Page.Contact .Fb:hover {
+  text-decoration: none !important;
+}
+.Page.Contact .Fb span {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+  position: relative;
+  top: -6px;
+  padding-left: 10px;
+}
+.Page.Contact .Fb:hover span {
+  text-decoration: underline;
+}
+.Page.Contact form .Cl {
+  padding: 0 10px 10px 0;
+}
+.Page.Contact form .Cl+.Cl {
+  padding: 0 0 10px 10px;
+}
+.Page.Contact form .Cl+.Cl+.Cl {
+  padding: 10px 10px 0 0;
+}
+.Page.Contact form .Cl+.Cl+.Cl+.Cl {
+  padding: 10px 0 0 10px;
+}
+.Page.Contact form input[type="text"],
+.Page.Contact form input[type="email"] {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background: #eeeeee;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+  color: #000;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.Page.Contact form input[type="text"]:focus,
+.Page.Contact form input[type="email"]:focus {
+  background: #dedede;
+}
+.Page.Contact form input.Error {
+  background: #e69595;
+}
+.Page.Contact form textarea {
+  width: 100%;
+  height: 130px;
+  border: none;
+  background: #eeeeee;
+  resize: none;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: left;
+  color: #000;
+  margin: 20px 0;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.Page.Contact form textarea:focus {
+  background: #dedede;
+}
+.Page.Contact form textarea.Error {
+  background: #e69595;
+}
+
+.Page.Contact form input[type="submit"] {
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  border: 1px solid #dedede;
+  background: none;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+  color: #000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Page.Contact form input[type="submit"]:hover {
+  background: #eeeeee;
+}
+.Page.Contact form .error {
+  display: none !important;
+}
+
+.Page.Contact form input::-webkit-input-placeholder,
+.Page.Contact form textarea::-webkit-input-placeholder {
+  color: #000;
+}
+.Page.Contact form input::-moz-placeholder,
+.Page.Contact form textarea::-moz-placeholder,
+.Page.Contact form input:-ms-input-placeholder,
+.Page.Contact form textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+.Page.Contact .FormSuccess {
+  display: none;
+  font-family: 'Gotham';
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+=============
+=============
+PC
+=============
+=============
+
+*/
+
+@media screen and (min-width: 1100px) {
+
+  /* Animation  */
+  .pt-page-scaleDown {
+    -webkit-animation: scaleDown 1s ease both;
+    -moz-animation: scaleDown 1s ease both;
+    animation: scaleDown 1s ease both;
+  }
+
+  .pt-page-scaleUp {
+    -webkit-animation: scaleUp .8s ease both;
+    -moz-animation: scaleUp .8s ease both;
+    animation: scaleUp .8s ease both;
+  }
+
+  .pt-page-scaleUpDown {
+    -webkit-animation: scaleUpDown 1s ease both;
+    -moz-animation: scaleUpDown 1s ease both;
+    animation: scaleUpDown 1s ease both;
+  }
+
+  .pt-page-scaleDownUp {
+    -webkit-animation: scaleDownUp 1s ease both;
+    -moz-animation: scaleDownUp 1s ease both;
+    animation: scaleDownUp 1s ease both;
+  }
+
+
+  /* scale and fade */
+  @-webkit-keyframes scaleDown {
+    to {
+      opacity: 0;
+      -webkit-transform: scale(.8);
+    }
+  }
+  @-moz-keyframes scaleDown {
+    to {
+      opacity: 0;
+      -moz-transform: scale(.8);
+    }
+  }
+  @keyframes scaleDown {
+    to {
+      opacity: 0;
+      transform: scale(.8);
+    }
+  }
+
+
+  @-webkit-keyframes scaleUp {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(.8);
+    }
+  }
+  @-moz-keyframes scaleUp {
+    from {
+      opacity: 0;
+      -moz-transform: scale(.8);
+    }
+  }
+  @keyframes scaleUp {
+    from {
+      opacity: 0;
+      transform: scale(.8);
+    }
+  }
+
+  @-webkit-keyframes scaleUpDown {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+    }
+  }
+  @-moz-keyframes scaleUpDown {
+    from {
+      opacity: 0;
+      -moz-transform: scale(1.2);
+    }
+  }
+  @keyframes scaleUpDown {
+    from {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+  @-webkit-keyframes scaleDownUp {
+    to {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+    }
+  }
+  @-moz-keyframes scaleDownUp {
+    to {
+      opacity: 0;
+      -moz-transform: scale(1.2);
+    }
+  }
+  @keyframes scaleDownUp {
+    to {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+
+  /* animation delay classes */
+  .pt-page-delay100 {
+    -webkit-animation-delay: .1s;
+    -moz-animation-delay: .1s;
+    animation-delay: .1s;
+  }
+  .pt-page-delay180 {
+    -webkit-animation-delay: .180s;
+    -moz-animation-delay: .180s;
+    animation-delay: .180s;
+  }
+  .pt-page-delay200 {
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    animation-delay: .2s;
+  }
+  .pt-page-delay300 {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+  .pt-page-delay400 {
+    -webkit-animation-delay: .4s;
+    -moz-animation-delay: .4s;
+    animation-delay: .4s;
+  }
+  .pt-page-delay500 {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+  }
+  .pt-page-delay700 {
+    -webkit-animation-delay: .7s;
+    -moz-animation-delay: .7s;
+    animation-delay: .7s;
+  }
+  .pt-page-delay1000 {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+}
+
+
+
+@media screen and (max-width: 1500px) {
+  .CountContainer {
+    padding: 0 35px;
+  }
+  .CountContainer.After .Line {
+    left: 35px;
+  }
+
+
+
+  .Page.Investment .Center {
+    padding: 0 35px;
+  }
+  .Page.Investment .Title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+
+  .Page.Floorplans .BuildingData {
+    padding: 100px 35px 0 35px;
+  }
+  .Page.Floorplans .Legend,
+  .Page.Floorplans .Bottom {
+    padding: 0 35px;
+  }
+
+
+
+  .Page.Developer .Center {
+    padding: 0 35px;
+  }
+  .Page.Developer .Title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+
+
+  .Page.Contact .Center {
+    padding: 0 35px;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1100px) {
+  .scrollbarEngine {
+    width: auto !important;
+    height: 100% !important;
+    z-index: 99 !important;
+    padding-top: 0px !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .scrollbarEngine .scrollbar {
+    display: none !important;
+  }
+  .scrollbarEngine .viewport {
+    width: auto !important;
+    height: 100% !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+  .scrollbarEngine .overview {
+    width: 99999px !important;
+    position: static !important;
+  }
+  .scrollbarEngine .disable {
+    display: none !important;
+  }
+}
+
+
+
+body:not(.computer) .scrollbarEngine {
+  width: auto !important;
+  height: 100% !important;
+  z-index: 99 !important;
+  padding-top: 0px !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body:not(.computer) .scrollbarEngine .scrollbar {
+  display: none !important;
+}
+body:not(.computer) .scrollbarEngine .viewport {
+  width: auto !important;
+  height: 100% !important;
+  overflow-x: scroll !important;
+  position: static !important;
+}
+body:not(.computer) .scrollbarEngine .overview {
+  position: static !important;
+
+  left: initial !important;
+}
+body:not(.computer) .scrollbarEngine .disable {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+=============
+=============
+IPAD
+=============
+=============
+
+
+*/
+
+@media (min-width: 760px) and (max-width: 1100px) {
+
+  body * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  .Page {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .Page.Home .Photo {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  /* Investment */
+  .Page.Investment .Box1,
+  .Page.Investment .Box2,
+  .Page.Investment .Box3,
+  .Page.Investment .Box4 {
+    width: 100% !important;
+  }
+
+  .Page.Investment .Cl.ClH50p,
+  .Page.Investment .Cl.ClH100p {
+    height: 70% !important;
+  }
+  .Page.Investment .Cl.ClH50p .Cl.ClH100p,
+  .Page.Investment .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+
+
+  /* Gallery */
+  .Page.Gallery .Cl.ClH50p {
+    height: 50%;
+  }
+  .Page.Gallery .Cl.ClH100p {
+    height: 100%;
+  }
+
+  .Page.Gallery .View.Mosaic .Bottom {
+    display: none;
+  }
+  .Page.Gallery .View.Mosaic .Items {
+    height: 70vh;
+    left: 0 !important;
+    overflow-x: scroll;
+  }
+  .Page.Gallery .View.Full .Hint {
+    display: block;
+  }
+  .Page.Gallery .View.Full .Nav {
+    display: none;
+  }
+  .Page.Gallery .View.Full .Items {
+    width: 100% !important;
+    left: 0 !important;
+    overflow-x: scroll;
+  }
+  .Page.Gallery .View.Full .Photo .Pic {
+    opacity: 1;
+  }
+
+
+  /* Location */
+  .Page.Location .Center {
+    padding: 0 35px;
+  }
+  .Page.Location .Logo {
+    width: 90px;
+    right: 35px;
+  }
+
+  /* Investment */
+  .Page.Investment .Box1,
+  .Page.Investment .Box2,
+  .Page.Investment .Box3,
+  .Page.Investment .Box4 {
+    width: 100% !important;
+  }
+
+  .Page.Investment .Cl.ClH50p,
+  .Page.Investment .Cl.ClH100p {
+    height: 70% !important;
+  }
+  .Page.Investment .Cl.ClH50p .Cl.ClH100p,
+  .Page.Investment .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+
+
+  /* Floorplans */
+  .Page.Floorplans .View .Buildings {
+    z-index: 999;
+  }
+  .Page.Floorplans .View.Buildings .Header {
+    z-index: 1000;
+  }
+  .Page.Floorplans .View.Buildings .InfoBlocked .Text {
+    line-height: 25px;
+    font-size: 11px;
+  }
+  .Page.Floorplans .Bottom .DownloadPdf {
+    float: left;
+  }
+  .Page.Floorplans .View.Floors .Zoom {
+    display: none;
+  }
+
+  /* Developer */
+  .Page.Developer .Box1,
+  .Page.Developer .Box2,
+  .Page.Developer .Box3,
+  .Page.Developer .Box4 {
+    width: 100% !important;
+  }
+
+  .Page.Developer .Cl.ClH50p,
+  .Page.Developer .Cl.ClH100p {
+    height: 70% !important;
+  }
+  .Page.Developer .Cl.ClH50p .Cl.ClH100p,
+  .Page.Developer .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+
+
+  /*  Contact */
+  .Page.Contact .Box1 {
+    width: 33.333% !important;
+  }
+  .Page.Contact .Box2 {
+    width: 66.666% !important;
+  }
+  .Page.Contact form input[type="text"],
+  .Page.Contact form input[type="email"] {
+    height: 30px;
+    padding: 0 10px;
+  }
+  .Page.Contact form textarea {
+    height: 80px !important;
+    padding: 10px;
+  }
+}
+@media (min-width: 760px) and (max-width: 1100px) and (orientation: portrait) {
+
+  body[data-content-actual="strona-glowna"] #Menu,
+  body[data-content-actual="strona-glowna"] #Menu .Step1,
+  body[data-content-actual="strona-glowna"] #Menu .Step2 {
+    width: 100% !important;
+  }
+  body[data-content-actual="strona-glowna"] #Menu .Inside {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  /* Home */
+  .Page.Home .Photo .Text {
+    display: none;
+  }
+
+  /* Floorplans */
+  .Page.Floorplans .View.Buildings .Header {
+    top: 40px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  .Page.Floorplans .Cl.grid1,
+  .Page.Floorplans .Cl.grid3 {
+    width: 100% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p,
+  .Page.Floorplans .Cl.ClH100p {
+    height: 50% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p .Cl.ClH100p,
+  .Page.Floorplans .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+
+  .Page.Floorplans .ClLeft {
+    position: relative;
+    left: 0 !important;
+  }
+  .Page.Floorplans .ClRight {
+    padding-left: 0% !important;
+  }
+
+  .Page.Floorplans .Datas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-left: 160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .Page.Floorplans .BuildingDatas {
+    margin-top: 20px;
+  }
+  .Page.Floorplans .BuildingData .Data {
+    width: 50%;
+    float: left;
+  }
+
+  .Page.Floorplans .View.Floors {
+    left: 0%;
+  }
+  .Page.Floorplans .View.Floors.active {
+    width: 100%;
+  }
+  .Page.Floorplans .View.Floors .Floor {
+    width: 100%;
+  }
+
+  /* Developer */
+  /* Contact */
+  .Page.Contact .grid1,
+  .Page.Contact .grid2,
+  .Page.Contact .grid3 {
+    width: 100% !important;
+    height: 50%;
+  }
+  .Page.Contact .Cl .Cl100p {
+    width: 33.333% !important;
+  }
+  .Page.Contact .Cl .Cl100p+.Cl100p {
+    width: 66.666% !important;
+  }
+  .Page.Contact .Cl+.Cl .Cl100p {
+    width: 66.666% !important;
+  }
+  .Page.Contact .Cl+.Cl .Cl100p+.Cl100p {
+    width: 33.333% !important;
+  }
+  .Page.Contact .Cl+.Cl .Cl33p {
+    width: 40%;
+  }
+  .Page.Contact .Cl+.Cl .Cl66p {
+    width: 60%;
+  }
+
+  .Page.Contact .Cl .ClH50p {
+    height: 100% !important;
+  }
+
+  .Page.Contact .Box2 .ClText {
+    bottom: initial;
+    position: absolute;
+    right: 0;
+  }
+  .Page.Contact .ClH50p.ClBlank {
+    display: none;
+  }
+  .Page.Contact .ClH50p.ClPhoto {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .Page.Contact form .Cl {
+    width: 100%;
+    padding: 0 0 10px 0 !important;
+  }
+  .Page.Contact form textarea {
+    margin: 0 0 10px;
+  }
+}
+@media (min-width: 760px) and (max-width: 1100px) and (orientation: landscape) {
+
+  #Menu {
+    width: 50% !important;
+  }
+  #Menu .Step2 .Logo {
+    margin: 80px auto 80px auto;
+  }
+  .Page.Home .Slider {
+    width: calc(50% + 45px) !important;
+    margin-left: 0;
+    position: absolute;
+    left: initial;
+    right: 0;
+  }
+  .Page.Home .SliderNavArrow .Side {
+    width: 100%;
+  }
+  .Page.Home .SliderNavArrow .Prev {
+    display: none;
+  }
+  .Page.Home .Photo .Text {
+    line-height: 40px;
+    font-size: 25px;
+    left: 50px;
+  }
+
+  .Page.Home .Photo .Text sup {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .Page.Home .SliderNav {
+    left: 50px;
+  }
+
+
+  .Page.Home .Menu .Step2 .Links a {
+    height: 35px;
+  }
+  .Page.Home .Menu .Step2 .Links a .Title {
+    height: 35px;
+    line-height: 35px;
+  }
+  .Page.Home .Menu .Step2 .Links a .Number {
+    height: 35px;
+    line-height: 35px;
+  }
+
+
+  .Page.Floorplans .BuildingData {
+    top: -50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+=============
+=============
+    PHONE
+=============
+=============
+*/
+
+@media (max-width: 760px) {
+
+
+  body * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+
+  .Loader .Logo img {
+    width: 150px;
+  }
+
+  body[data-content="galeria"] #Menu .BtSwitch .Lines .Line1,
+  body[data-content="galeria"] #Menu .BtSwitch .Lines .Line2,
+  body[data-content="galeria"] #Menu .BtSwitch .Lines .Line3 {
+    background: #fff;
+  }
+
+  #Menu {
+    width: 100vW !important;
+  }
+  body:not(.menuOpen):not(.menuClose) #Menu {
+    width: 50px !important;
+    height: 50px;
+  }
+  body.menuOpen #Menu {
+    background: #fff;
+  }
+  #Menu .Step1,
+  #Menu .Step2 {
+    left: 0;
+    right: initial;
+    border: none;
+  }
+  #Menu .Step1 {
+    background: transparent;
+  }
+  #Menu .Step2 {
+    width: 100vW !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #Menu .Step2 .Inside {
+    width: 100vW !important;
+  }
+  #Menu .Step2 .Logo {
+    height: 100px;
+    margin: 10px auto;
+  }
+  #Menu .Step2 .Links {
+    width: 80%;
+  }
+  #Menu .Step2 .Author {
+    bottom: 20px;
+  }
+
+  #Menu .Step2 .Links a {
+    height: 30px;
+  }
+  #Menu .Step2 .Links a .Title {
+    font-size: 10px;
+  }
+  #Menu .Mask {
+    display: none;
+  }
+  #Menu .BtSwitch .Txt {
+    display: none;
+  }
+  #Menu .Status {
+    display: none;
+  }
+  #Menu .BtSwitch .Lines {
+    margin: 15px auto 0 auto;
+  }
+  #Menu .Step1 {
+    width: 50px;
+  }
+
+  #Contents .Content {
+    padding-left: 0px;
+  }
+
+  .Page {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .CountContainer {
+    padding: 0 20px;
+  }
+  .CountContainer.After .Line {
+    left: 20px;
+  }
+
+  .grid1,
+  .grid2,
+  .grid3 {
+    display: block;
+    width: 100% !important;
+  }
+
+  .PhotoContainer {
+    position: absolute;
+  }
+  .MapContainer .BtFullScreen {
+    display: none;
+  }
+
+
+  /* Home */
+  body:not(.computer) .Page.Home .xxx {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 99999;
+  }
+  .Page.Home .Vector {
+    display: none;
+  }
+  .Page.Home .Photo,
+  .Page.Home .Photo .Pic {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  .Page.Home .Menu {
+    max-width: 90%;
+    min-height: 220px;
+  }
+  .Page.Home .Menu .Step1 {
+    display: block;
+    z-index: 999;
+  }
+  .Page.Home .Menu .Step2 {
+    display: none;
+    z-index: -1;
+  }
+  body:not(.computer) .Page.Home .Menu:hover .Step1 {
+    display: block;
+    opacity: 1;
+  }
+  body:not(.computer) .Page.Home .Menu:hover .Step2 {
+    display: none;
+  }
+  .Page.Home .Menu.open .Step1 {
+    display: none;
+    z-index: -1;
+  }
+  .Page.Home .Menu.open .Step2 {
+    display: block !important;
+    opacity: 1;
+    z-index: 999;
+  }
+
+
+  .Page.Home .Menu .Step1 .Logo {
+    width: 160px;
+  }
+  .Page.Home .Menu .Step1 .More {
+    font-size: 9px;
+  }
+
+  .Page.Home .Menu .Step2 .Links a {
+    height: 25px;
+    overflow: hidden;
+    opacity: 1 !important;
+  }
+  .Page.Home .Menu .Step2 .Links a .Title {
+    height: 25px;
+    line-height: 25px;
+    font-size: 10px;
+  }
+  .Page.Home .Menu .Step2 .Links a:hover .Title {
+    color: #000;
+  }
+  .Page.Home .Menu .Step2 .Links a .Line {
+    top: 11px;
+  }
+  .Page.Home .Menu .Step2 .Links a .Number {
+    height: 25px;
+    line-height: 25px;
+  }
+  .Page.Home .Menu .Step2 .Links a .Number svg {
+    top: 4px;
+  }
+
+
+  /* Investment */
+  .Page.Investment .Cl {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+  .Page.Investment .Cl.ClH50p,
+  .Page.Investment .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  .Page.Investment .Cl.ClH50p .Cl.ClH100p,
+  .Page.Investment .Cl.ClH100p .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+
+
+  .Page.Investment .Cl.ClH50p.Box1 .Cl+.Cl {
+    min-height: 450px !important;
+  }
+
+  .Page.Investment .Box1,
+  .Page.Investment .Box2,
+  .Page.Investment .Box3,
+  .Page.Investment .Box4 {
+    display: block !important;
+  }
+
+  .Page.Investment .Title {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .Page.Investment .Center {
+    position: relative;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    padding: 80px 20px 60px !important;
+    margin: 0;
+  }
+  .Page.Investment .Cl.ClH50p.Box4 {
+    height: 300px !important;
+  }
+
+
+  /* Location */
+  .Page.Location {
+    padding-bottom: 0;
+  }
+  .Page.Location .MapContainer {
+    height: 60vh;
+  }
+  .Page.Location .Center {
+    position: static;
+    bottom: 0;
+    padding: 80px 20px 60px;
+    margin: 0;
+  }
+  .Page.Location .Bottom {
+    height: auto;
+    position: static;
+  }
+  .Page.Location .Cl.ClH50p,
+  .Page.Location .Cl.ClH100p {
+    height: auto !important;
+    width: 100vW;
+  }
+  .Page.Location .Cl.ClH50p .Cl.ClH100p,
+  .Page.Location .Cl.ClH100p .Cl.ClH100p {
+    height: auto !important;
+  }
+  .Page.Location .Center {
+    position: relative;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    padding: 20px;
+    margin: 0;
+  }
+  .Page.Location .Logo {
+    width: 100px;
+    right: 20px;
+  }
+
+
+  /* Gallery */
+  .Page.Gallery .ViewMode {
+    display: none;
+  }
+  .Page.Gallery .View.Mosaic {
+    display: none;
+    z-index: 0 !important;
+    opacity: 0 !important;
+  }
+  .Page.Gallery .View.Full {
+    z-index: 1 !important;
+    opacity: 1 !important;
+  }
+
+  .Page.Gallery .View.Full .Hint {
+    display: block;
+    bottom: 10px;
+    left: 20px;
+  }
+  .Page.Gallery .View.Full .Hint svg {
+    width: 40px;
+  }
+  .Page.Gallery .View.Full .Items {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .Page.Gallery .View.Full .Nav {
+    display: none;
+  }
+  .Page.Gallery .View.Full .Photo {
+    background: #fff;
+  }
+  .Page.Gallery .View.Full .Photo .Pic {
+    opacity: 1;
+  }
+  .Page.Gallery .View.Full .Items {
+    width: 100% !important;
+    left: 0 !important;
+    overflow-x: scroll;
+  }
+
+
+  /* Floorplans */
+  .Page.Floorplans .View .Buildings {
+    z-index: 999;
+  }
+  .Page.Floorplans .View.Buildings .Header {
+    top: initial;
+    bottom: 40px;
+    text-shadow: 0 0 7px #000000;
+    font-size: 17px;
+    z-index: 1000;
+    line-height: 20px;
+  }
+  .Page.Floorplans .View.Buildings .InfoBlocked {
+    margin: -100px 0px 0 10px;
+  }
+  .Page.Floorplans .View.Buildings .InfoBlocked .Text {
+    line-height: 14px;
+    font-size: 7px;
+    letter-spacing: 0px;
+    padding: 0 3px;
+  }
+  .Page.Floorplans .View.Buildings .InfoBlocked .Arrow {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #649061;
+    margin-left: -4px;
+    bottom: -4px;
+  }
+  .Page.Floorplans .ClLeft {
+    height: auto;
+  }
+  .Page.Floorplans .BuildingDatas {
+    position: relative;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    top: 0;
+    height: auto;
+  }
+  .Page.Floorplans .BuildingData {
+    position: relative;
+    padding: 100px 20px 0 20px;
+  }
+  .Page.Floorplans .BuildingData .Title {
+    position: static;
+  }
+  .Page.Floorplans .Legend,
+  .Page.Floorplans .Bottom {
+    display: none;
+    position: relative;
+    bottom: 0;
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+  .Page.Floorplans .Bottom .DownloadPdf {
+    float: left;
+  }
+  .Page.Floorplans[data-view="Buildings"] .Legend,
+  .Page.Floorplans[data-view="Floors"] .Bottom {
+    display: block;
+  }
+  .Page.Floorplans .View.Floors .Close {
+    top: 20px;
+    right: 20px;
+  }
+  .Page.Floorplans .CountContainer {
+    display: block;
+  }
+  .Page.Floorplans[data-step="2"] .CountContainer {
+    display: none;
+  }
+  .Page.Floorplans .ShowFloors {
+    display: none;
+    width: 100%;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .Page.Floorplans[data-step="2"] .ShowFloors {
+    display: block;
+  }
+  .Page.Floorplans .ShowFloors:before {
+    display: block;
+    content: "Zobacz plan";
+    background: #000;
+    font-family: 'Gotham';
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .Page.Floorplans .View.Floors .Floors {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 4;
+  }
+  .Page.Floorplans .View.Floors .Zoom {
+    display: none;
+  }
+
+
+  .Page.Floorplans .View.Floors {
+    left: 0%;
+  }
+  .Page.Floorplans .View.Floors.active {
+    width: 100%;
+  }
+  .Page.Floorplans .View.Floors .Floor {
+    width: 100%;
+  }
+
+
+  /* Developer */
+  .Page.Developer .Cl {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+  }
+  .Page.Developer .Cl.ClH50p,
+  .Page.Developer .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  .Page.Developer .Cl.ClH50p .Cl.ClH100p,
+  .Page.Developer .Cl.ClH100p .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+
+  .Page.Developer .Box1,
+  .Page.Developer .Box2,
+  .Page.Developer .Box3,
+  .Page.Developer .Box4 {
+    display: block !important;
+  }
+
+  .Page.Developer .Title {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .Page.Developer .Center {
+    position: relative;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    padding: 80px 20px 60px;
+    margin: 0;
+  }
+  .Page.Developer .Cl.ClH50p.Box3 {
+    height: 300px !important;
+  }
+
+
+  /* Contact */
+  .Page.Contact .Center {
+    position: relative;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    padding: 80px 20px 60px;
+    margin: 0;
+  }
+  .Page.Contact .TableCell {
+    padding: 0px 20px;
+  }
+  .Page.Contact .ClText {
+    height: auto !important;
+    position: static !important;
+  }
+
+  .Page.Contact .Cl33p {
+    width: 100% !important;
+  }
+  .Page.Contact .Cl66p {
+    width: 100% !important;
+  }
+
+  .Page.Contact form input[type="text"],
+  .Page.Contact form input[type="email"] {
+    height: 30px;
+    padding: 0 10px;
+  }
+  .Page.Contact form textarea {
+    height: 80px !important;
+    padding: 10px;
+  }
+}
+@media (max-width: 760px) and (orientation: portrait) {
+
+
+  /* Investment */
+  .Page.Investment .Box1,
+  .Page.Investment .Box2,
+  .Page.Investment .Box3,
+  .Page.Investment .Box4 {
+    width: 100% !important;
+  }
+  .Page.Investment .Cl {
+    display: block;
+  }
+  .Page.Investment .Cl .Cl50p {
+    width: 100%;
+  }
+  .Page.Investment .Box3 .Cl .Center {
+    padding: 80px 20px 20px;
+  }
+  .Page.Investment .Box3 .Cl+.Cl .Center {
+    padding: 0px 20px 0px !important;
+  }
+
+
+  /* Floorplans */
+  .Page.Floorplans .View .Buildings {
+    -ms-transform: translateY(-50%) translateX(-50%) scale(.25);
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(.25);
+    -moz-transform: translateY(-50%) translateX(-50%) scale(.25);
+    -o-transform: translateY(-50%) translateX(-50%) scale(.25);
+    transform: translateY(-50%) translateX(-50%) scale(.25);
+  }
+
+  .Page.Floorplans .View.Buildings .Header {
+    top: initial;
+    bottom: 20px;
+    font-size: 10px;
+    line-height: 14px;
+    text-shadow: 0 0 7px #000000;
+  }
+
+  .Page.Floorplans .Cl.grid1,
+  .Page.Floorplans .Cl.grid3 {
+    width: 100% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p,
+  .Page.Floorplans .Cl.ClH100p {
+    height: 50% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p .Cl.ClH100p,
+  .Page.Floorplans .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+
+  .Page.Floorplans .Cl.ClH100p.ClLeft {
+    height: 65% !important;
+    width: 100vw !important;
+    top: 35%;
+    left: 0;
+  }
+  .Page.Floorplans .BuildingData {
+    height: 180px;
+  }
+  .Page.Floorplans .BuildingData .Title {
+    position: absolute;
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .Page.Floorplans .Datas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-left: 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .Page.Floorplans .BuildingData .Data {
+    width: 40%;
+    float: left;
+  }
+  .Page.Floorplans .BuildingData .Data .Value {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .Page.Floorplans .Legend {
+    display: none !important;
+  }
+
+  .Page.Floorplans .Cl.ClH100p.ClRight {
+    height: 35% !important
+  }
+  .Page.Floorplans .View.Floors.active {
+    height: 100vh;
+    position: fixed;
+    z-index: 9;
+  }
+
+
+
+  /* Developer */
+  .Page.Developer .Box1,
+  .Page.Developer .Box2,
+  .Page.Developer .Box3,
+  .Page.Developer .Box4 {
+    width: 100% !important;
+  }
+  .Page.Developer .Cl {
+    display: block;
+  }
+  .Page.Developer .Cl .Cl50p {
+    width: 100%;
+  }
+
+  .Page.Developer .Box1 .Cl .Center {
+    padding: 80px 20px 20px;
+  }
+  .Page.Developer .Box1 .Cl+.Cl .Center {
+    padding: 0px 20px 20px;
+  }
+  .Page.Developer .Box4 .Cl .Center {
+    padding: 80px 20px 20px;
+  }
+  .Page.Developer .Box4 .Cl+.Cl .Center {
+    padding: 0px 20px 20px;
+  }
+
+
+
+  /* Contact */
+  .Page.Contact .Cl.ClH50p,
+  .Page.Contact .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  .Page.Contact .Cl.ClH50p .Cl.ClH100p,
+  .Page.Contact .Cl.ClH100p .Cl.ClH100p {
+    height: auto !important;
+    min-height: 200px !important;
+  }
+  .Page.Contact .Center {
+    padding: 80px 20px 40px;
+  }
+  .Page.Contact .Center.MarginNone {
+    padding-top: 0px;
+  }
+  .Page.Contact .MapContainer {
+    height: 200px;
+  }
+  .Page.Contact form input[type="submit"] {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 760px) and (orientation: landscape) {
+
+
+  #Menu .Step2 .Links {
+    max-width: 100%;
+    position: static;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
+  #Menu .Step2 .Author {
+    position: static;
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    margin: 30px auto 30px auto;
+  }
+
+  .Page.Home .Menu {
+    min-width: 340px;
+  }
+
+
+
+  .Page.Investment .Box3 .Cl .Center {
+    padding: 80px 20px !important;
+  }
+
+
+  .Page.Floorplans[data-step="1"] .View.Buildings {
+    width: 100vW !important;
+    height: 100vH !important;
+    position: fixed;
+    background: #fff;
+    z-index: 999;
+  }
+  .Page.Floorplans[data-step="2"] .Cl.ClH100p.ClLeft {
+    width: 100vW !important;
+    height: 100vH !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+  }
+  .Page.Floorplans[data-step="3"] .View.Floors {
+    width: 100vW !important;
+    height: 100vH !important;
+    position: fixed;
+    background: #f6f6f6;
+    z-index: 9999;
+  }
+
+
+  .Page.Floorplans .Close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+  .Page.Floorplans .Close svg {
+    stroke: #000;
+  }
+
+
+  .Page.Floorplans .View .Buildings {
+    -ms-transform: translateY(-50%) translateX(-50%) scale(.4);
+    -webkit-transform: translateY(-50%) translateX(-50%) scale(.4);
+    -moz-transform: translateY(-50%) translateX(-50%) scale(.4);
+    -o-transform: translateY(-50%) translateX(-50%) scale(.4);
+    transform: translateY(-50%) translateX(-50%) scale(.4);
+  }
+  .Page.Floorplans .Cl.grid1,
+  .Page.Floorplans .Cl.grid3 {
+    width: 100% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p,
+  .Page.Floorplans .Cl.ClH100p {
+    height: 75% !important;
+  }
+  .Page.Floorplans .Cl.ClH50p .Cl.ClH100p,
+  .Page.Floorplans .Cl.ClH100p .Cl.ClH100p {
+    height: 100% !important;
+  }
+  .Page.Floorplans .Cl.ClH100p.ClLeft {
+    padding: 20px 0 0;
+    height: auto !important;
+  }
+  .Page.Floorplans .BuildingData {
+    height: 180px;
+  }
+  .Page.Floorplans .BuildingData .Title {
+    position: absolute;
+    font-size: 55px;
+    line-height: 55px;
+    padding-left: 40px;
+  }
+  .Page.Floorplans .Datas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding-left: 160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .Page.Floorplans .BuildingData .Data {
+    width: 50%;
+    float: left;
+  }
+
+
+
+  .Page.Floorplans .Legend,
+  .Page.Floorplans .Bottom {
+    display: none !important;
+  }
+
+
+
+
+  .Page.Contact .CountContainer {
+    display: none;
+  }
+  .Page.Contact .Box1,
+  .Page.Contact .Box2 {
+    display: block;
+    width: 100% !important;
+    height: 95% !important;
+  }
+  .Page.Contact .Box2 {
+    height: auto !important;
+  }
+  .Page.Contact form {
+    margin: 30px 0;
+    display: block;
+  }
+  .Page.Contact .Box1 .Cl,
+  .Page.Contact .Box2 .Cl {
+    display: block;
+    height: 100% !important;
+    width: 50%;
+  }
+  .Page.Contact .Box2 .MapContainer {
+        height: 200px !important;
+  }
+  .Page.Contact .Box2 .Cl {
+    width: 100%;
+  }
+  .Page.Contact .Box2 .ClText .Cl {
+    width: 50% !important;
+  }
+  .Page.Contact .Box2 .ClText .Cl66p .Center {
+    width: 90%;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .Page.Contact .Center {
+    padding: 0;
+    top: 20px;
+    left: 20px;
+  }
+  .Page.Contact .TableCell {
+    padding: 0 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------
+   Scroll
+   ------------ */
+
+.scrollbarEngine {
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.scrollbarEngine .viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.scrollbarEngine .overview {
+  width: 1416px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  list-style: none;
+}
+.scrollbarEngine .scrollbar {}
+.scrollbarEngine .track {}
+.scrollbarEngine .thumb {}
+.scrollbarEngine .thumb .end {}
+.noSelect {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
